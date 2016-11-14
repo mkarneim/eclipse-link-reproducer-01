@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile       'org.eclipse.persistence:eclipselink:2.6.4'
+  compile       'com.google.guava:guava:18.0'
+  compile       'commons-io:commons-io:2.5'
+  testCompile   'org.hsqldb:hsqldb:2.3.4'
+  testCompile   'org.assertj:assertj-core:2.5.0'
+  testCompile   'junit:junit:4.12'
+}
