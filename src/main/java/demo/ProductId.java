@@ -2,7 +2,9 @@ package demo;
 
 import java.io.Serializable;
 
-public class ProductId implements Serializable, Comparable<ProductId> {
+import com.google.common.primitives.Ints;
+
+public class ProductId extends Number implements Serializable, Comparable<ProductId> {
 
   private static final long serialVersionUID = 1L;
 
@@ -47,6 +49,25 @@ public class ProductId implements Serializable, Comparable<ProductId> {
     ProductId other = (ProductId) obj;
     if (value != other.value) return false;
     return true;
+  }
+
+  @Override
+  public int intValue() {
+    return Ints.checkedCast(value);
+  }
+
+  public long longValue() {
+    return value;
+  }
+
+  @Override
+  public float floatValue() {
+    return value;
+  }
+
+  @Override
+  public double doubleValue() {
+    return value;
   }
 
 }

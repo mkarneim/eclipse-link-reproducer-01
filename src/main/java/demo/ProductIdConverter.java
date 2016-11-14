@@ -45,6 +45,7 @@ public class ProductIdConverter implements Converter {
   @Override
   public final void initialize(DatabaseMapping mapping, Session session) {
     mapping.getField().setColumnDefinition("NUMBER");
+    mapping.getField().setType(Long.class);
   }
 
   @Override
